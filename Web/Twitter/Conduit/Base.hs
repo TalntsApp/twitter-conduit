@@ -68,7 +68,7 @@ makeRequest' m url query = do
             then HTTP.urlEncodedBody query
             else \r -> r { HTTP.queryString = HT.renderSimpleQuery False query }
     return $ addParams $ req { HTTP.method = m
-                             , HTTP.checkStatus = \_ _ _ -> Nothing
+                             , HTTP.checkResponse = \_ _ -> pure ()
                              }
 
 getResponse :: MonadResource m

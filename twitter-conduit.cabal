@@ -1,5 +1,5 @@
 name:              twitter-conduit
-version:           0.2.1
+version:           0.2.2
 license:           BSD3
 license-file:      LICENSE
 author:            HATTORI Hiroki, Hideyuki Tanaka, Takahiro HIMURA
@@ -64,7 +64,7 @@ library
     , conduit >= 1.1
     , conduit-extra >= 1.1
     , http-types
-    , http-conduit >= 2.0 && < 2.2
+    , http-conduit >= 2.2 && < 2.3
     , http-client >= 0.3
     , aeson >= 0.7.0.5
     , attoparsec >= 0.10
@@ -138,7 +138,7 @@ test-suite spec_main
     , conduit
     , conduit-extra >= 1.1
     , http-types
-    , http-conduit
+    , http-conduit >= 2.2 && < 2.3
     , http-client
     , authenticate-oauth
     , case-insensitive
